@@ -1,0 +1,3 @@
+string sensorType
+---
+float64 value
