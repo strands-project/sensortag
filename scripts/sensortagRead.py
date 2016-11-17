@@ -94,7 +94,10 @@ def humidity():
         print "exception"
         restart()
         return -1 
-
+      except pexpect.EOF:
+        print "EOF exception... attempting to restart"
+        restart()
+        return -1
 
 def handle_reading(req):
   if(not restarting):
